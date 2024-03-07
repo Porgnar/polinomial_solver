@@ -58,6 +58,11 @@ long double polyfx(long double x, long double xnth[], long double coeff[], int a
 
 int main(int argc, char *argv[]){
 	
+	// we don't run the program if it doesn't make sense to
+	
+	if(argc==1){printf("No input coefficients detected, program terminates\n"); return -1;}
+	if(argc==2){printf("0th order polinomial, this is a constant: %s\n",argv[1]); return -2;};
+	
 	// variable declarations
 	
 	long double coeff[argc-1];
@@ -210,6 +215,8 @@ int main(int argc, char *argv[]){
 		}
 		
 	}
+	
+
 	
 	
 	
